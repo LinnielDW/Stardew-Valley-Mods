@@ -13,7 +13,8 @@
 # Visual Studio 2015 cache/options directory
 .vs/
 
-# ReSharper
+# ReSharper/Rider
+/.idea/
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
