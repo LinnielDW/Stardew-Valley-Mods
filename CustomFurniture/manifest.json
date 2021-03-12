@@ -6,11 +6,5 @@
   "UniqueID": "Platonymous.CustomFurniture",
   "EntryDll": "CustomFurniture.dll",
   "MinimumApiVersion": "3.0.0",
-  "UpdateKeys": [ "Nexus:1254" ],
-  "Dependencies": [
-    {
-      "UniqueID": "Platonymous.Toolkit",
-      "MinimumVersion": "1.5.1"
-    }
-  ]
+  "UpdateKeys": [ "Nexus:1254" ]
 }

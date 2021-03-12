@@ -11,8 +11,6 @@ using System;
 using Harmony;
 using System.Reflection;
 using Microsoft.Xna.Framework.Graphics;
-using PyTK.Extensions;
-using PyTK.Types;
 
 namespace CustomFurniture
 {
@@ -22,6 +20,14 @@ namespace CustomFurniture
         internal static Dictionary<string,CustomFurniture> furniture = new Dictionary<string, CustomFurniture>();
         internal static Dictionary<string, CustomFurniture> furniturePile = new Dictionary<string, CustomFurniture>();
         public static Mod instance;
+        
+        public static void AddOrReplace<TKey, TValue>(Dictionary<TKey, TValue> dict, TKey key, TValue value)
+        {
+            if (!dict.ContainsKey(key))
+                dict.Add(key, value);
+            else
+                dict[key] = value;
+        }
 
         public override void Entry(IModHelper helper)
         {
@@ -162,8 +168,8 @@ namespace CustomFurniture
                         if (!CustomFurniture.Textures.ContainsKey(tkey))
                             CustomFurniture.Textures.Add(tkey, data.fromContent ? data.texture : cpack.GetActualAssetKey(data.texture));
                         CustomFurniture f = new CustomFurniture(data, objectID, Vector2.Zero);
-                        furniturePile.AddOrReplace(pileID, f);
-                        furniture.AddOrReplace(objectID, f);
+                        AddOrReplace(furniturePile, pileID, f);
+                        AddOrReplace(furniture, objectID, f);
                     }
                 }
 

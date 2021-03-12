@@ -12,19 +12,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="3.1.0" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="3.2.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Furniture\non-cp-packs-go-here.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\PyTK\PyTK.csproj">
-      <Private>false</Private>
-    </ProjectReference>
   </ItemGroup>
 
   <Import Project="$(SolutionDir)\common.targets" />

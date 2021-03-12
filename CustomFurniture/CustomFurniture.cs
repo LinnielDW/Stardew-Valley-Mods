@@ -4,7 +4,6 @@ using StardewValley;
 using StardewValley.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-using PyTK.CustomElementHandler;
 using System.Collections.Generic;
 using System.Linq;
 using StardewValley.Locations;
@@ -12,7 +11,7 @@ using Netcode;
 
 namespace CustomFurniture
 {
-    public class CustomFurniture : Furniture, ISaveElement
+    public class CustomFurniture : Furniture
     {
         public Texture2D texture;
         public static Dictionary<string, string> Textures = new Dictionary<string, string>();
